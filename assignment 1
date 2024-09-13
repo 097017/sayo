@@ -1,0 +1,10 @@
+git init
+echo "This is some content" > file.txt
+git add file.txt
+git commit -m "Initial commit with file.txt"
+git checkout -b new-branch
+echo "Additional content on new branch">>file.txt
+git add file.txt
+git commit -m "Update file.txt on new-branch"
+git checkout master
+git merge new-branch
